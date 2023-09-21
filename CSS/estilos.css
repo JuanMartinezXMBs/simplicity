@@ -151,7 +151,7 @@ fiquem centralizados e com a cor clara */
     tamanho ideal
     tamanho maximo */
 .destaque h2 {
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(2.5rem, 9.5vw, 6.5rem);
 }
 
 .destaque p {
