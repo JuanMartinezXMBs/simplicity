@@ -133,6 +133,7 @@ da manipulação programada com JavaScript. */
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
 }
 
 /* 2) Crie uma regra CSS para formatar o h2 e o p
@@ -145,8 +146,17 @@ fiquem centralizados e com a cor clara */
 }
 
 
+/* FUNÇÃO CLAMP:
+    tamanho minimo
+    tamanho ideal
+    tamanho maximo */
+.destaque h2 {
+    font-size: clamp(3rem, 10vw, 7rem);
+}
 
-
+.destaque p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
 
 
 
