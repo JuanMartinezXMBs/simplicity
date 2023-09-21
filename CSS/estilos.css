@@ -200,11 +200,31 @@ abbr {
 address { font-style: normal; }
 
 
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+.historia iframe {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 700px;
+}
 
+.localizacao iframe {
+    margin-bottom: 2rem;
+    width: 100%;
+}
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-
-
-
-
-
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
+}
