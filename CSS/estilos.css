@@ -228,3 +228,8 @@ footer {
     height: 30vh;
     font-weight: bold;
 }
+
+.limitador{
+    width: 95vw;
+    margin: auto;
+}
