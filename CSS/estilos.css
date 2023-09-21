@@ -146,7 +146,7 @@ fiquem centralizados e com a cor clara */
 
     animation-name: animaDestaque;
     animation-duration: 3s;
-    animation-timing-function: ease-out;
+    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 
