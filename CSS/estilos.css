@@ -146,6 +146,7 @@ fiquem centralizados e com a cor clara */
 
     animation-name: animaDestaque;
     animation-duration: 3s;
+    animation-timing-function: ease-out;
 }
 
 
@@ -164,13 +165,11 @@ fiquem centralizados e com a cor clara */
 /* from e to: usandos para como começar e terminar a animação */
 @keyframes animaDestaque {
     from  {
-        
         opacity: 0; 
+        transform: translateY(-500px);
     }
 
-    to {
-        opacity: 1; 
-    }
+    to {opacity: 1;}
 }
 
 
