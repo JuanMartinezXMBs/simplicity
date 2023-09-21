@@ -142,11 +142,11 @@ fiquem centralizados e com a cor clara */
 
 .destaque h2, .destaque p {
     text-align: center;
-    color: white;
+    color: wheat;
 
     animation-name: animaDestaque;
     animation-duration: 3s;
-    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 
@@ -173,14 +173,31 @@ fiquem centralizados e com a cor clara */
 }
 
 
+article h2 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+    color: (var(--cor-titulo));
+}
 
+.front-end, .historia, .localizacao {
+    text-align: center;
+}
 
+article p {
+    padding: 0.5rem 0; /* primeiro valor cima e baixo. segundo valor laterais */
+    font-size: 1.2rem;
+}
 
+abbr {
+    background-color: black;
+    color: wheat;
+    text-decoration: none;
+    padding: 0 3px;
+    border-radius: 6px;
+}
 
-
-
-
-
+address { font-style: normal; }
 
 
 
