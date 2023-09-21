@@ -143,6 +143,9 @@ fiquem centralizados e com a cor clara */
 .destaque h2, .destaque p {
     text-align: center;
     color: white;
+
+    animation-name: animaDestaque;
+    animation-duration: 3s;
 }
 
 
@@ -158,6 +161,17 @@ fiquem centralizados e com a cor clara */
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
+/* from e to: usandos para como começar e terminar a animação */
+@keyframes animaDestaque {
+    from  {
+        
+        opacity: 0; 
+    }
+
+    to {
+        opacity: 1; 
+    }
+}
 
 
 
