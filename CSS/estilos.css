@@ -49,6 +49,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 12vh;
 }
 
 
@@ -125,7 +126,7 @@ da manipulação programada com JavaScript. */
 -Imagem de fundo deve ficar parada
 -Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna) */
 .destaque {
-    height: 500px;
+    height: 88vh;
     background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
