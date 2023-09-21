@@ -124,11 +124,24 @@ da manipulação programada com JavaScript. */
 -Imagem de fundo (fundo-destaque)
 -Imagem de fundo deve ficar parada
 -Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna) */
+.destaque {
+    height: 500px;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /* 2) Crie uma regra CSS para formatar o h2 e o p
 contidos em Destaque. Faça com que os textos
 fiquem centralizados e com a cor clara */
 
+.destaque h2, .destaque p {
+    text-align: center;
+    color: white;
+}
 
 
 
