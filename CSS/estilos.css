@@ -1,4 +1,156 @@
-body {
-    background-color: lightgreen;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
+
+* { box-sizing: border-box; }
+
+:root {
+    /* Variáveis para a 
+    paleta de cores do site */
+    --cor-titulo: #4d4d4d;
+    --cor-texto: #333;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
 }
+
+html { font-size: 16px; }
+
+
+body {
+    color: var(--cor-texto);
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--cor-clara);
+}
+
+/* CSS Reset em alguns elementos */
+body, h1, h2, p, figure, .menu {
+    margin: 0;
+    padding: 0;
+}
+
+img { max-width: 100%; }
+
+h1 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+h1 a {
+    color: var(--cor-clara);
+    background-color: var(--cor-escura);
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+}
+
+a { text-decoration: none; }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Formatação da palavra Menu */
+nav h2 a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+nav h2 a:hover, nav h2 a:focus, 
+.menu a:hover, .menu a:focus {
+    background-color: var(--cor-intermediaria);
+}
+
+/* Regra da lista ul de links */
+.menu { 
+    list-style: none; 
+
+    /* ATENÇÃO!
+    Usamos display:none para
+    não exibir inicialmente
+    a lista de links. */
+    display: none;
+}
+
+/* Regra para formatar os
+links contidos na lista/menu */
+.menu a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;    
+}
+
+
+
+/* Seletor de classes combinadas
+Esta regra somente irá funcionar quando
+AS DUAS CLASSES estiverem aplicadas JUNTAS no
+elemento HTML (no caso, na lista de menu/links). 
+
+Obs.: esta combinação será possível por meio
+da manipulação programada com JavaScript. */
+.menu.aberto {
+
+    /* O Flex fará a lista de links aparecer */
+    display: flex;
+
+    /* Com os links em forma de coluna (vertical) */
+    flex-direction: column;
+    
+    /* Usamos as propriedades de posicionamento
+    e coordenadas para garantir o encaixe correto
+    (abaixo do título e da palavra Menu). */
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    /* Aplicamos um fundo à lista evitando a
+    dificuldade de leitura dos links */
+    background-color: var(--cor-clara);
+}
+
+/* Exercícios */
+
+/* 1) Crie uma regra CSS para formatar o artigo/seção de Destaque com as seguintes configurações:
+
+-Altura de uns 500px
+-Imagem de fundo (fundo-destaque)
+-Imagem de fundo deve ficar parada
+-Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna) */
+
+/* 2) Crie uma regra CSS para formatar o h2 e o p
+contidos em Destaque. Faça com que os textos
+fiquem centralizados e com a cor clara */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
