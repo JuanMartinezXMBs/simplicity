@@ -151,8 +151,8 @@ fiquem centralizados e com a cor clara */
     color: wheat;
 
     animation-name: animaDestaque;
-    animation-duration: 3s;
-    animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 
@@ -249,14 +249,42 @@ footer {
 - Definir largura de 100% para os itens dentro do "menu"
 - Definir largura de 70% para o nav
 - Reduzir para 200px a altura da imagem contida no artigo Front-End*/
- @media screen ( ) {
-    
+
+@media screen and (min-width: 570px) {
+    nav h2 {
+        display:none;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .front-end img {
+        height:  200px;
+    }
  }
  
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
 
  
-
 - Aumentar o tamanho geral de todos os textos para 18px 
 - Definir o tamanho máximo da classe limitador para 1000px */
+
+@media screen and (min-width: 900px) {
+    html  {
+        font-size: 18px;
+    }
+
+    .limitador {
+       max-width:1000px;
+    }
+}
