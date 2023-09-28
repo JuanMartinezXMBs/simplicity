@@ -271,7 +271,23 @@ footer {
         height:  200px;
     }
  }
- 
+
+.conteudo {
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    padding: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+}
+
+
+
+
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
 
