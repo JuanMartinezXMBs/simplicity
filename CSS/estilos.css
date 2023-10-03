@@ -318,7 +318,15 @@ th:first-child {text-align: left;}
 
 tr:nth-child(odd) {background-color: var(--cor-clara);}
 
+/* Pseudo elemento ::before (::after)*/
 
+/* position relative mudar o contexto para trabalahr com os itens dentro do local escolhido (no caso o "td:last-child" sem o relative o item vai ser trabalhado dentro do -portview-) */
+td:last-child {position: relative;}
+td:last-child::before { 
+    content:'R$ ';
+    position: absolute;
+    left: 10px; 
+}
 
 
 
