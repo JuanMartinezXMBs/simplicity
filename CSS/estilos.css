@@ -55,6 +55,7 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
+    z-index: 10;
     background-color: white;
 }
 
@@ -318,7 +319,8 @@ th:first-child {text-align: left;}
 
 tr:nth-child(odd) {background-color: var(--cor-clara);}
 
-/* Pseudo elemento ::before (::after)*/
+/* Pseudo elemento ::before (::a
+fter)*/
 
 /* position relative mudar o contexto para trabalahr com os itens dentro do local escolhido (no caso o "td:last-child" sem o relative o item vai ser trabalhado dentro do -portview-) */
 td:last-child {position: relative;}
@@ -328,7 +330,21 @@ td:last-child::before {
     left: 10px; 
 }
 
+figure {
+    text-align: center;
+}
 
+.galeria img {
+    border-radius: 50%;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+/* aplicamos o :hover  e o :focus ao seletor da tag "a" em vez de aplicar no img. desta forma, o acionamento funcionará tanto com o mause quanto com teclado */
+.galeria a:hover img, .galeria a:focus img {
+    transform: scale(1);
+    border-radius: 10%;
+}
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
 
