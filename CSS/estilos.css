@@ -317,7 +317,7 @@ figure {
 form {
     max-width: 500px;
     margin: auto;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 }
 
 input, select, textarea {
@@ -344,8 +344,28 @@ label {
 
 form div * { width: 70%; }
 
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 9px #999;
+}
 
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: 0 9px #999;
+}
 
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
