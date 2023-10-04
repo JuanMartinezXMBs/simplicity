@@ -253,7 +253,7 @@ footer {
     border-bottom: solid 1px;
     margin-bottom: 1rem;
 }
-
+/* ----------------------tabela pg, produtos-------------------------- */
 table {
     width: 80%;
     margin: auto;
@@ -297,7 +297,7 @@ td:last-child::before {
     position: absolute;
     left: 10px; 
 }
-
+/* ------------------galeria de fotos serviços------------------------ */
 figure {
     text-align: center;
 }
@@ -313,7 +313,7 @@ figure {
     transform: scale(1);
     border-radius: 10%;
 }
-
+/* -------------------formulario pg. contato------------------------- */
 form {
     max-width: 500px;
     margin: auto;
@@ -335,6 +335,14 @@ form div {
     align-items: center;
     margin-top: 1rem;
 }
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+form div * { width: 70%; }
 
 
 
