@@ -241,38 +241,6 @@ footer {
     margin: auto;
 }
 
-/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
-
- 
-
-- Esconder a palavra Menu
-- Habilitar o flex para a classe "menu"
-- Definir largura de 100% para os itens dentro do "menu"
-- Definir largura de 70% para o nav
-- Reduzir para 200px a altura da imagem contida no artigo Front-End*/
-
-@media screen and (min-width: 570px) {
-    nav h2 {
-        display:none;
-    }
-
-    nav {
-        width: 70%;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .menu li {
-        width: 100%;
-    }
-
-    .front-end img {
-        height:  200px;
-    }
- }
-
 .conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
@@ -345,6 +313,62 @@ figure {
     transform: scale(1);
     border-radius: 10%;
 }
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: lightgreen;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+textarea { height: auto; }
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
+
+- Esconder a palavra Menu
+- Habilitar o flex para a classe "menu"
+- Definir largura de 100% para os itens dentro do "menu"
+- Definir largura de 70% para o nav
+- Reduzir para 200px a altura da imagem contida no artigo Front-End*/
+
+@media screen and (min-width: 570px) {
+    nav h2 {
+        display:none;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .front-end img {
+        height:  200px;
+    }
+ }
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
 
