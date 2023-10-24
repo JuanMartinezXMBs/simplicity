@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-
 * { box-sizing: border-box; }
 
 :root {
@@ -56,8 +55,8 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background-color: var(--cor-clara);
+    z-index: 10;
+    background-color: white;
 }
 
 
@@ -141,43 +140,51 @@ da manipulação programada com JavaScript. */
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
 }
 
 /* 2) Crie uma regra CSS para formatar o h2 e o p
 contidos em Destaque. Faça com que os textos
 fiquem centralizados e com a cor clara */
-.destaque h2, .destaque p { 
+
+.destaque h2, .destaque p {
     text-align: center;
-    color: var(--cor-clara);
+    color: wheat;
 
     animation-name: animaDestaque;
     animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+
+/* FUNÇÃO CLAMP:
+    tamanho minimo
+    tamanho ideal
+    tamanho maximo */
 .destaque h2 {
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(2.5rem, 9.5vw, 6.5rem);
 }
 
 .destaque p {
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-/* Regra de animação */
+/* from e to: usandos para como começar e terminar a animação */
 @keyframes animaDestaque {
-    from { 
+    from  {
         opacity: 0; 
-        transform: translateY(-600px);
+        transform: translateY(-500px);
     }
-    
-    to { opacity: 1; }
+
+    to {opacity: 1;}
 }
+
 
 article h2 {
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: Raleway, sans-serif;
-    color: var(--cor-titulo);
+    color: (var(--cor-titulo));
 }
 
 .front-end, .historia, .localizacao {
@@ -185,81 +192,55 @@ article h2 {
 }
 
 article p {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0; /* primeiro valor cima e baixo. segundo valor laterais */
     font-size: 1.2rem;
 }
 
 abbr {
+    background-color: black;
+    color: wheat;
     text-decoration: none;
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    padding: 0 2px;
-    border-radius: 4px;
+    padding: 0 3px;
+    border-radius: 6px;
 }
 
 address { font-style: normal; }
 
 
-/* Correção dos exercícios */
-
-/* 1) Crie uma regra para formatar o artigo de História da Internet com:
-- Plano de fundo: imagem "fundo-madeira"
-- Deixe a imagem parada e cobrindo todo o espaço do artigo */
 .historia {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
+    color: white;
+    text-shadow: 3px 3px black;
 }
-
-/* 2) Crie uma regra para formatar o titulo "História da Internet" com cor clara e uma sombra no texto. */
-.historia h2 {
-    color: var(--cor-clara);
-    text-shadow: var(--cor-escura) 2px 2px 4px;
-}
-
-/* 3) Crie uma regra para formatar o vídeo do artigo História da Internet com:
-- Largura de 100%
-- Largura máxima de 700px
-- Margem inferior de 2rem */
 .historia iframe {
+    margin-bottom: 2rem;
     width: 100%;
     max-width: 700px;
-    margin-bottom: 2rem;
 }
 
-/* 4) Crie uma regra para formatar o mapa da Localização com:
-- Largura de 100%
-- Margem superior de 2rem */
 .localizacao iframe {
-    width: 100%;
     margin-top: 2rem;
+    width: 100%;
 }
 
-/* 5) Crie uma classe chamada "limitador" com largura de 95vw e margem automática. Aplique esta classe no cabeçalho e no artigo front-end. */
-.limitador {
-    width: 95vw;
-    margin: auto;
-}
-
-/* 6) Crie uma regra para o rodapé com:
-- Fundo escuro
-- Cor do texto clara
-- Altura de 30vh
-- Negrito
-- Flex com centralização total
-- Texto centralizado */
 footer {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    height: 30vh;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
 }
 
+.limitador{
+    width: 95vw;
+    margin: auto;
+}
 
-/* Regras para as páginas Produtos, Serviços e Contato */
 .conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
@@ -267,32 +248,28 @@ footer {
 }
 
 .conteudo h2 {
-    padding-left: 0;
+    padding: 0;
     font-size: 1.8rem;
     border-bottom: solid 1px;
     margin-bottom: 1rem;
 }
-
-
+/* ----------------------tabela pg, produtos-------------------------- */
 table {
     width: 80%;
     margin: auto;
 }
 
 table, th, td {
-    border: solid 1px;
-
-    /* Remove o espaço entre bordas */
+    border: solid 2px;
     border-collapse: collapse;
 }
 
 caption {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: bold;
     font-size: 1.1rem;
     padding-bottom: 0.5rem;
 }
-
 th {
     background-color: var(--cor-escura);
     color: var(--cor-clara);
@@ -302,54 +279,45 @@ th {
 
 td { padding: 0.5rem; }
 
-td:nth-child(2) { text-align: center; }
+td:nth-child(2) { text-align: center;}
 
-th:last-child, td:last-child { 
-    text-align: right;
-}
+th:last-child, td:last-child {text-align: right;}
 
-th:first-child { text-align: left; }
+th:first-child {text-align: left;}
 
-tr:nth-child(odd) {
-    background-color: var(--cor-clara);
-}
+tr:nth-child(odd) {background-color: var(--cor-clara);}
 
-/* Pseudo-elemento  ::before (::after) */
-td:last-child { position: relative; }
+/* Pseudo elemento ::before (::a
+fter)*/
+
+/* position relative mudar o contexto para trabalahr com os itens dentro do local escolhido (no caso o "td:last-child" sem o relative o item vai ser trabalhado dentro do -portview-) */
+td:last-child {position: relative;}
 td:last-child::before { 
-    content: "R$ ";
+    content:'R$ ';
     position: absolute;
-    left: 10px;
-} 
+    left: 10px; 
+}
+/* ------------------galeria de fotos serviços------------------------ */
+figure {
+    text-align: center;
+}
 
-/* Regra geral do emoji do h2 dentro dos articles conteudo */
-.conteudo h2::before { content: "ℹ️ "; }
-.servicos h2::before { content: "🛠️ "; }
-.contato h2::before { content: "📧 "; }
-
-.galeria { text-align: center; }
 .galeria img {
-    border-radius: 100%;
+    border-radius: 50%;
     transform: scale(0.9);
     transition: 0.3s;
-    filter: blur(1px) brightness(150%);
 }
 
-/* Aplicamos o :hover e o :focus ao seletor de tag "a"
-em vez de aplicar no "img". Desta forma, o acionamento funcionará
-tanto com mouse quanto com teclado. */
+/* aplicamos o :hover  e o :focus ao seletor da tag "a" em vez de aplicar no img. desta forma, o acionamento funcionará tanto com o mause quanto com teclado */
 .galeria a:hover img, .galeria a:focus img {
     transform: scale(1);
     border-radius: 10%;
-    filter: blur(0);
 }
-
-
-
-/* Regras para o formulário */
+/* -------------------formulario pg. contato------------------------- */
 form {
     max-width: 500px;
     margin: auto;
+    /* background-color: lightgreen; */
 }
 
 input, select, textarea {
@@ -374,12 +342,7 @@ label {
     width: 30%;
 }
 
-/* Pseudo-classe :not()
-Permite criar exceções para uma regra.
-Neste exemplo, estamos aplicando 70% de largura
-para tudo (*) dentro do "form div" EXCETO o "label". */
-form div *:not(label) { width: 70%; }
-
+form div * { width: 70%; }
 
 button {
     background-color: var(--cor-escura);
@@ -389,62 +352,64 @@ button {
     padding: 1rem 0.5rem;
     cursor: pointer;
     border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 9px #999;
 }
 
 button:hover, button:focus {
     background-color: var(--cor-clara);
     color: var(--cor-escura);
-    box-shadow: var(--cor-escura) 0 0 2px;
+    box-shadow: 0 9px #999;
 }
 
-#cep { width: 60%; }
-
-#buscar { 
-    width: 39%; 
-    padding: 12px;
-}
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
-
-
-
-
-
-
-
-/* Exercícios: regras condicionais (Media Queries) */
-
-/* 1) Crie uma regra condicional para telas a partir
-de 570px com as seguintes alterações:
+/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
 - Esconder a palavra Menu
 - Habilitar o flex para a classe "menu"
 - Definir largura de 100% para os itens dentro do "menu"
 - Definir largura de 70% para o nav
-- Reduzir para 150px a altura da imagem contida no artigo Front-End */
+- Reduzir para 200px a altura da imagem contida no artigo Front-End*/
+
 @media screen and (min-width: 570px) {
-    nav h2 { display: none; }
-    .menu { display: flex; }
-    .menu li { width: 100%; }
-    nav { width: 70%; }
-    .front-end img { height: 150px; }
-}
+    nav h2 {
+        display:none;
+    }
 
-/* 2) Crie uma regra condicional para telas a partir de 900px
-com  as seguintes alterações:
+    nav {
+        width: 70%;
+    }
 
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .front-end img {
+        height:  200px;
+    }
+ }
+
+/* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
+
+ 
 - Aumentar o tamanho geral de todos os textos para 18px 
-- Definir o tamanho máximo da classe limitador para 1000px; */
-@media screen and (min-width: 900px){
-    .limitador { max-width: 900px; }
-    html { font-size: 18px; }
+- Definir o tamanho máximo da classe limitador para 1000px */
+
+@media screen and (min-width: 900px) {
+    html  {
+        font-size: 18px;
+    }
+
+    .limitador {
+       max-width:1000px;
+    }
 }
-
-
-
-
-
-
-
-
-
