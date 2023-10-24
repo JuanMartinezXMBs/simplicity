@@ -16,8 +16,10 @@ const mensagem = formulario.querySelector("#status");
 //Seleção do Campo telefone usando Jquery
 const campoTelefone = $("#telefone");
 
-// Ativado a mascara para o telefone
+// Ativado a mascara para o telefone e cep
 $(campoTelefone).mask("(00) 0000-0000"); //Exemplo: (11) 2135-0300 
+$(campoCep).mask("00000-000"); //Exemplo: 12135-300 
+
 
 //-------------------------------------------------------------------------------------------
 
@@ -29,7 +31,7 @@ botaoBuscar.addEventListener("click", async function(event){
 
     /* Verificando se o cep NÃO tem 8 dígitos.
     O operador !== significa "diferente de". */
-    if(campoCep.value.length !== 8){
+    if(campoCep.value.length !== 9){
         // Alerte o usuário sobre o erro de digitação
         mensagem.textContent = "Digite um CEP válido!";
         mensagem.style.color = "purple";
