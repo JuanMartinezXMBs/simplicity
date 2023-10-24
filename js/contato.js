@@ -10,6 +10,17 @@ const campoEstado = formulario.querySelector("#estado");
 const botaoBuscar = formulario.querySelector("#buscar");
 const mensagem = formulario.querySelector("#status");
 
+//Seleção do Campo telefone usando JS puro
+// const campoTelefone = formulario.querySelector("#telefone");
+
+//Seleção do Campo telefone usando Jquery
+const campoTelefone = $("#telefone");
+
+// Ativado a mascara para o telefone
+$(campoTelefone).mask("(00) 0000-0000"); //Exemplo: (11) 2135-0300 
+
+//-------------------------------------------------------------------------------------------
+
 // Detectando o evento de CLICK no botão buscar
 botaoBuscar.addEventListener("click", async function(event){
     event.preventDefault();
@@ -52,10 +63,16 @@ botaoBuscar.addEventListener("click", async function(event){
         mensagem.textContent = "Cep encontrado";
         mensagem.style.color = "green";
 
+        const exemplos = document.querySelectorAll(".exemplo");
+        for(const exemplo of exemplos){
+            exemplo.classList.remove("exemplo");
+        }
+
         campoEndereco.value = dados.logradouro;
         campoBairro.value =  dados.bairro;
         campoCidade.value =  dados.localidade;
         campoEstado.value = dados.uf;
-        
     }
+
+
 });
