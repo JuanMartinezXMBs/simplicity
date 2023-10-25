@@ -37,16 +37,16 @@
                 repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>
 
             <figure class="galeria">
-                <a href="imagens/desenvolvimento-web.jpg">
+                <a data-title="Desenvolvimento de sites" href="imagens/desenvolvimento-web.jpg" data-lightbox="foto">
                     <img src="imagens/desenvolvimento-web-mini.jpg" alt="">
                 </a>
-                <a href="imagens/design-grafico.jpg">
+                <a data-title="Densenvolvimento grafico" href="imagens/design-grafico.jpg" data-lightbox="foto">
                     <img src="imagens/design-grafico-mini.jpg" alt="">
                 </a>
-                <a href="imagens/marketing-digital.jpg">
+                <a data-title="marketing digital" href="imagens/marketing-digital.jpg" data-lightbox="foto">
                     <img src="imagens/marketing-digital-mini.jpg" alt="">
                 </a>
-                <a href="imagens/consultoria-treinamento.jpg">
+                <a data-title="consultoria treinamento" href="imagens/consultoria-treinamento.jpg" data-lightbox="foto">
                     <img src="imagens/consultoria-treinamento-mini.jpg" alt="">
                 </a>
             </figure>
@@ -78,9 +78,17 @@
             - <time>2023</time> </p>
     </footer>
 
+    <!-- Importação da biblioteca Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- Importação do JS do Plugin/extensão lightbox -->
     <script src="lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+            albumLabel: "foto %1 de %2"
+        });
+    </script>
 
     <script src="js/menu.js"></script>
 
