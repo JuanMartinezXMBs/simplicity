@@ -394,7 +394,7 @@ button {
 button:hover, button:focus {
     background-color: var(--cor-clara);
     color: var(--cor-escura);
-    box-shadow: var(--cor-escura) 0 0 2px;
+    box-shadow: var(--cor-escura) 10px 0 0 2px;
 }
 
 #cep { width: 60%; }
@@ -409,7 +409,10 @@ button:hover, button:focus {
 
 .exemplo { display: none; }
 
-
+#my-form-status {
+    margin-left: 20px;
+    color: blue;
+}
 
 
 /* Exercícios: regras condicionais (Media Queries) */
