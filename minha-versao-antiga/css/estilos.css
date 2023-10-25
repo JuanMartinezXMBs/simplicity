@@ -55,6 +55,7 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
+    z-index: 10;
     background-color: white;
 }
 
@@ -240,38 +241,6 @@ footer {
     margin: auto;
 }
 
-/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
-
- 
-
-- Esconder a palavra Menu
-- Habilitar o flex para a classe "menu"
-- Definir largura de 100% para os itens dentro do "menu"
-- Definir largura de 70% para o nav
-- Reduzir para 200px a altura da imagem contida no artigo Front-End*/
-
-@media screen and (min-width: 570px) {
-    nav h2 {
-        display:none;
-    }
-
-    nav {
-        width: 70%;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .menu li {
-        width: 100%;
-    }
-
-    .front-end img {
-        height:  200px;
-    }
- }
-
 .conteudo {
     background-color: var(--cor-intermediaria);
     padding: 0.5rem;
@@ -284,7 +253,7 @@ footer {
     border-bottom: solid 1px;
     margin-bottom: 1rem;
 }
-
+/* ----------------------tabela pg, produtos-------------------------- */
 table {
     width: 80%;
     margin: auto;
@@ -318,9 +287,116 @@ th:first-child {text-align: left;}
 
 tr:nth-child(odd) {background-color: var(--cor-clara);}
 
+/* Pseudo elemento ::before (::a
+fter)*/
+
+/* position relative mudar o contexto para trabalahr com os itens dentro do local escolhido (no caso o "td:last-child" sem o relative o item vai ser trabalhado dentro do -portview-) */
+td:last-child {position: relative;}
+td:last-child::before { 
+    content:'R$ ';
+    position: absolute;
+    left: 10px; 
+}
+/* ------------------galeria de fotos serviços------------------------ */
+figure {
+    text-align: center;
+}
+
+.galeria img {
+    border-radius: 50%;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+/* aplicamos o :hover  e o :focus ao seletor da tag "a" em vez de aplicar no img. desta forma, o acionamento funcionará tanto com o mause quanto com teclado */
+.galeria a:hover img, .galeria a:focus img {
+    transform: scale(1);
+    border-radius: 10%;
+}
+/* -------------------formulario pg. contato------------------------- */
+form {
+    max-width: 500px;
+    margin: auto;
+    /* background-color: lightgreen; */
+}
+
+input, select, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+textarea { height: auto; }
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+form div * { width: 70%; }
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: 0 9px #999;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
+/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
+- Esconder a palavra Menu
+- Habilitar o flex para a classe "menu"
+- Definir largura de 100% para os itens dentro do "menu"
+- Definir largura de 70% para o nav
+- Reduzir para 200px a altura da imagem contida no artigo Front-End*/
+
+@media screen and (min-width: 570px) {
+    nav h2 {
+        display:none;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .front-end img {
+        height:  200px;
+    }
+ }
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
 

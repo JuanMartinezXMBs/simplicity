@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Simplicity</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <div class="limitador">
+            <h1><a href="index.html">Simplicity</a></h1>
+            <nav>
+                <h2><a href="">Menu &equiv; </a></h2>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+       <article class="limitador conteudo">
+        <h2>Contato</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo eius fugiat animi Lorem, ipsum dolor. voluptas neque unde ipsam ipsa optio, cupiditate deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, nulla.</p>
+
+        <form action="" method="post">
+            <div>
+            <!-- nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required placeholder="Nome completo...">
+            </div>
+
+            <div>
+                <!-- email -->
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <!-- data denascimento -->
+                <label for="nascimento">Data de nascimento:</label>
+                <input type="date" name="date" id="nascimento" required>
+            </div>
+
+            <div>
+                <!-- Telefone -->
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="number" id="telefone">
+            </div>
+
+            <!-- assunto -->
+            <div>
+                <label for="assunto">Assunto:</label>
+                <select name="assunto" id="assunto" required>
+                    <!-- Deixe sempre o primeiro "option vazio" -->
+                    <option value=""></option>
+                    <option>Duvidas</option>
+                    <option>Elogios</option>
+                    <option>Reclamações</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+
+            <!-- mensagem -->
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+            </div>
+            <!-- botão enviar -->
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+    
+    <footer>
+        <p>Simplicity &copy;  é um site criado pelo Professor e Pesquisador Tiago Bezzera do instituto Senac - unidade Penha <time> 2023 </time> </p>
+    </footer>
+
+
+</body>
+</html>
